@@ -1,0 +1,474 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    background-image: url('bg.png'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+}
+
+
+
+#superior{
+    background-color:rgb(86,7,12);
+    color: white;
+}
+
+.cls{
+    background-color:rgb(255, 255, 255);
+    color: white;
+}
+
+.btngu {
+    background-color: rgb(105, 34, 38) !important;
+    color: white !important;
+    border: none !important; /* Sin bordes */
+    outline: none !important; /* Elimina el borde de enfoque */
+    
+}
+
+.btngu:hover {
+    background-color: rgb(124, 64, 68) !important;
+    color: white !important;
+}
+
+.btngu:active {
+    background-color:  rgb(165, 95, 100) !important; /* Mantener el mismo color cuando se presiona */
+    color: white !important;
+}
+.btngu:focus {
+    outline: none !important; /* Elimina el borde de enfoque */
+}
+
+
+.btngu2 {
+    background-color: rgb(105, 34, 38) !important;
+    color: white !important;
+    border: none !important; /* Sin bordes */
+    outline: none !important; /* Elimina el borde de enfoque */
+}
+
+.btngu2:hover {
+    background-color: rgb(124, 64, 68) !important;
+    color: white !important;
+}
+
+.btngu2:active {
+    background-color:  rgb(165, 95, 100) !important; /* Mantener el mismo color cuando se presiona */
+    color: white !important;
+}
+
+.btngu2:focus {
+    outline: none !important; /* Elimina el borde de enfoque */
+}
+
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1050;
+    background-color: white; 
+    border-bottom: 5px solid #C9A33A; /* Color amarillo-mostaza */
+}
+.navbar img {
+  max-height: 60px;
+  height: auto;
+  width: auto;
+}
+@media (max-width: 768px) {
+  .navbar img {
+    max-height: 40px;
+  }
+}
+
+
+.container {
+  margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 90px;
+    padding: 20px 10px;
+  }
+}
+
+.modal-dialog {
+    max-width: 80%; 
+}
+
+
+
+.modal-body {
+    background-color: #f3f3f3; /* Gris claro */
+}
+.card{
+    width: 100%;
+    max-width: 320px; /* Tamaño base para escritorio */
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Más profundidad */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+}
+
+.custom-card {
+    border-radius: 20px; /* Redondeo de bordes */
+    overflow: hidden; /* Asegura que las imágenes y el contenido respeten el borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para mejor apariencia */
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.custom-card .card-body {
+    flex-grow: 1; /* Permite que el contenido ocupe el máximo espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los botones estén al final */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    border-top: #C9A33A 1px solid;
+}
+
+.card-title {
+    min-height: 50px; /* Ajusta este valor según el tamaño del título más largo */
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.card-text {
+    min-height: 80px; /* Ajusta este valor según la descripción más larga */
+}
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+
+.footer-custom {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  border-top: 5px solid #C9A33A; /* Color amarillo-mostaza */
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-custom img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-custom img {
+    max-height: 40px;
+  }
+}
+
+/* Logo específico para ajustar su tamaño */
+.footer-logo,
+.logo-gubernamental {
+  max-width: 100%;
+  height: auto;
+}
+
+.derechos {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+
+.row > .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  #placehldrs-inhabltds {
+    background-color:  #dbdbdb;  /* Un gris que contrasta con el fondo pero no tanto como el blanco */
+    color: #5c5c5c;            /* Texto gris oscuro */
+    border: 1px solid #bcbcbc;
+    cursor: not-allowed;
+    pointer-events: none;
+    font-style: italic;        /* Opcional: da el toque de que es solo informativo */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .modal-body {
+    background-color: #ececec;/* Gris medio oscuro */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-control,
+  .form-select,
+  textarea {
+    background-color: #ffffff; /* Blanco para que resalte */
+    color: #212529;            /* Texto oscuro para buena lectura */
+    border: 1px solid #ced4da;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-control:focus,
+  .form-select:focus,
+  textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+  
+  label {
+    color: #333333; /* Texto de etiquetas más oscuro */
+    font-weight: 500;
+  }
+/* Estilos para el mensaje */
+#mensaje-modal {
+    display: none;
+    position: relative;
+    padding: 1.5rem;
+    border: 1px solid #cce5ff;
+    border-radius: 0.75rem;
+    background: #e0f7ff;
+    color: #004085;
+    font-weight: 500;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: slideFadeIn 0.6s ease forwards;
+    overflow: hidden;
+  }
+  
+  /* Barra de progreso */
+  #barra-tiempo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #007bff;
+    width: 0%;
+    animation: llenarBarra 7s linear forwards;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+  
+  /* Animación de la barra */
+  @keyframes llenarBarra {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Animación de entrada */
+  @keyframes slideFadeIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  .subrayado {
+    text-decoration: underline;
+    text-decoration-color: #004085; /* Azul más bonito */
+    text-decoration-thickness: 1px; /* Más grueso si quieres */
+  }
+  
+
+
+  .alerta-temporal2 {
+    position: relative;
+    background-color: #fff0f0;
+    color: #d00000;
+    border: 1px solid #d00000;
+  }
+  
+  .barra-tiempo2 {
+    height: 5px;
+    background-color: #d00000;
+    width: 0%;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .custom-date {
+    background-color: #f8f9fa;
+    border: 1px solid #004085;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #004085;
+  }
+  
+  .custom-date::-webkit-calendar-picker-indicator {
+    filter: invert(34%) sepia(73%) saturate(1423%) hue-rotate(183deg) brightness(94%) contrast(101%);
+    cursor: pointer;
+  }
+
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px); /* Solo desliza verticalmente */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  #alerta-error {
+    color: #000; /* Texto negro */
+    border: 2px solid #dc3545; /* Borde rojo Bootstrap pero más grueso */
+    background-color: #f8d7da; /* Color de fondo típico de alerta */
+    border-radius: 0em;
+  }
+
+
+
+/* Ajuste del container principal en responsive */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 90px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+}
+
+/* Unificación de .card-img */
+.card-img {
+  height: 300px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* Limita altura de logos para responsividad */
+.logo {
+  max-height: 60px;
+  height: auto;
+  width: auto;
+}
+
+/* Oculta el logo secundario en pantallas pequeñas */
+@media (max-width: 768px) {
+  .logo-secundario {
+    display: none !important;
+  }
+}
+.derechos{
+  color: #535353;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+
+
+}
+
+.navbar-custom {
+  background-color: white;
+  border-bottom: 5px solid #C9A33A;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Puedes reducir este padding si quieres aún más pegado */
+}
+
+.logo-navbar {
+  height: 50px;
+  max-width: 100%;
+  margin-right: auto; /* Asegura que el logo quede a la izquierda */
+}
+
+@media (max-width: 768px) {
+  .logo-navbar {
+    height: 40px;
+  }
+}
+
+.btn-icon-logout {
+  background-color:  rgb(105, 34, 38) !important;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-logout i {
+  font-size: 1.2rem;
+
+
+  display: block;
+}
+.btn-icon-circle {
+  background-color: rgb(105, 34, 38);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-icon-circle:hover {
+  background-color: rgb(124, 64, 68);
+}
+
+.btn-icon-circle:active {
+  background-color: rgb(165, 95, 100);
+}
